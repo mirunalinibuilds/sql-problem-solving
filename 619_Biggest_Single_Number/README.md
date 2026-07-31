@@ -41,8 +41,7 @@ To solve the problem, we first identify all numbers that occur exactly once. The
 ## 🔍 SQL Query
 
 ```sql
-SELECT
-    MAX(num) AS num
+SELECT MAX(num) AS num
 FROM MyNumbers
 WHERE num IN (
     SELECT num
