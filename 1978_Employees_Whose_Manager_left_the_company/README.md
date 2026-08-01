@@ -40,13 +40,9 @@ To determine whether a manager has left the company, we need to check if an empl
 ## 🔍 SQL Query
 
 ```sql
-SELECT
-    employee_id
+SELECT employee_id
 FROM Employees
-WHERE manager_id NOT IN (
-    SELECT employee_id
-    FROM Employees
-)
+WHERE manager_id NOT IN (SELECT employee_id FROM Employees)
 AND salary < 30000
 ORDER BY employee_id;
 ```
